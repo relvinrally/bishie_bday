@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Bishie's Birthday</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" crossorigin="anonymous" referrerpolicy="no-referrer"/>
+  <script src="https://code.jquery.com/jquery-3.7.1.min.js" crossorigin="anonymous"></script>
+</head>
+<body style="background: url('images/st3 bg3.jpg') no-repeat center center fixed; background-size: cover;">
+  <div class="scanlines"></div>
+
+  <div id="wrapper">
+    <div class="flag__birthday">
+      <img src="./images/1.png" alt="" width="350" class="flag__left">
+      <img src="./images/1.png" alt="" width="350" class="flag__right">
+    </div>
+
+    <div class="content">
+      <div class="left">
+        <div class="title title-left">
+          <h1 class="happy">
+            <span style="--t: 4s;">H</span>
+            <span style="--t: 4.2s;">a</span>
+            <span style="--t: 4.4s;">p</span>
+            <span style="--t: 4.6s;">p</span>
+            <span style="--t: 4.8s;">y</span>
+          </h1>
+          <h1 class="birthday">Birthday Bishie!</h1>
+          <div class="hat">
+            <img src="./images/hat.png" alt="" width="130">
+          </div>
+        </div>
+
+        <div class="date__of__birth">
+          <span>12 Oct</span>
+        </div>
+
+        <div class="btn">
+          <button id="btn__letter">
+            Click Here Bishie! <i class="fa-regular fa-envelope"></i>
+          </button>
+        </div>
+      </div>
+
+      <div class="right">
+        <div class="box__account animate-up">
+          <div class="image">
+            <img src="./images/unnamed.png" alt="">
+          </div>
+          <div class="name name-center">
+            <span>To my twin!</span>
+          </div>
+          <div class="balloon_one animate-up" style="animation-delay: 0.3s;">
+            <img width="100px" src="./images/balloon1.png" alt="">
+          </div>
+          <div class="balloon_two animate-up" style="animation-delay: 0.5s;">
+            <img width="100px" src="./images/balloon2.png" alt="">
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Floating Neon Triangles (removed right-side triangle) -->
+    <div class="neon-triangle triangle1"></div>
+    <div class="neon-triangle triangle2"></div>
+    <!-- <div class="neon-triangle triangle3"></div> removed -->
+
+    <div class="decorate_star star1"></div>
+    <div class="decorate_star star2"></div>
+    <div class="decorate_star star3"></div>
+    <div class="decorate_star star4"></div>
+    <div class="decorate_star star5"></div>
+
+    <div class="boxMail">
+      <i class="fa-solid fa-xmark"></i>
+      <div class="boxMail-container">
+        <div class="card1">
+          <h2 class="username">To: Bishie<span class="underline"></span></h2>
+        </div>
+
+        <div class="card2">
+          <div class="card2-content">
+            <h2 id="typedMessage"></h2>
+            <span class="cursor">|</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="decorations">
+        <div class="spark spark1"></div>
+        <div class="spark spark2"></div>
+        <div class="spark spark3"></div>
+        <div class="spark spark4"></div>
+        <div class="spark spark5"></div>
+      </div>
+    </div>
+  </div>
+
+<script>
+  let datatxtletter = "Happy 21 bishie! Enjoy yo bday by eating lots of chocolates and junk food (Just don't end up getting cavities lol). I always silently thank you for spawning into my life. I'm always by your side and cheering for you in those good as well as stupid decisions you make hehe. Never stop being you. You're just too cool for school 😌";
+
+  const mailBox = document.querySelector('.btn');
+  const boxmail = document.querySelector('.boxMail');
+  const close = document.querySelector('.fa-xmark');
+  const typedText = document.getElementById("typedMessage");
+  const cursor = document.querySelector(".cursor");
+  let typingInterval;
+
+  mailBox.onclick = function () {
+    boxmail.classList.add('active');
+    typedText.textContent = "";
+    cursor.style.display = "inline";
+    clearInterval(typingInterval);
+
+    let i = 0;
+    typingInterval = setInterval(() => {
+      if (i < datatxtletter.length) {
+        typedText.textContent += datatxtletter.charAt(i);
+        i++;
+      } else {
+        clearInterval(typingInterval);
+        blinkCursor();
+      }
+    }, 50);
+  };
+
+  close.addEventListener('click', function () {
+    boxmail.classList.remove('active');
+    clearInterval(typingInterval);
+    cursor.style.display = "none";
+  });
+
+  function blinkCursor() {
+    setInterval(() => {
+      cursor.style.visibility = cursor.style.visibility === "visible" ? "hidden" : "visible";
+    }, 500);
+  }
+</script>
+</body>
+</html>
