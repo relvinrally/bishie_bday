@@ -126,3 +126,13 @@ body{margin:0;padding:0;font-family:'ITCBenguiat',sans-serif;color:#fff;overflow
     transform: translateY(0);
   }
 }
+/* Upside Down Sentence */
+.upside-down {
+  text-align: center;
+  font-size: 1.5rem;
+  color: #1111ff; /* deep blue */
+  transform: rotate(180deg);
+  margin-top: 30px;
+  margin-bottom: 0; /* keeps it stuck at bottom */
+  text-shadow: 0 0 10px #00008B, 0 0 20px #001a66;
+}
