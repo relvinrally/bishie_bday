@@ -84,6 +84,35 @@
           <div class="card2-content">
             <h2 id="typedMessage"></h2>
             <span class="cursor">|</span>
+            <div class="upside-text">Yo da besht</div>
+  </div>
+
+  <div class="decorations">
+    <div class="spark spark1"></div>
+    <div class="spark spark2"></div>
+    <div class="spark spark3"></div>
+    <div class="spark spark4"></div>
+    <div class="spark spark5"></div>
+  </div>
+</div>
+
+<style>
+.upside-text {
+  position: absolute;
+  bottom: 10px;          /* stick to bottom */
+  left: 50%;             /* horizontal center */
+  transform: translateX(-50%) rotate(180deg); /* center + upside down */
+  font-size: 1.4rem;
+  color: #0048ff;
+  text-shadow: 0 0 8px #d10000, 0 0 15px #ae0000;
+  animation: neonPulseBlue 2s infinite alternate;
+}
+
+@keyframes neonPulseBlue {
+  0% { text-shadow: 0 0 5px #0a2a6b, 0 0 10px #1e3a8a; }
+  100% { text-shadow: 0 0 15px #1e3a8a, 0 0 30px #0a2a6b; }
+}
+</style>
           </div>
         </div>
       </div>
