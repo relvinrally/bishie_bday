@@ -136,3 +136,32 @@ body{margin:0;padding:0;font-family:'ITCBenguiat',sans-serif;color:#fff;overflow
   margin-bottom: 0; /* keeps it stuck at bottom */
   text-shadow: 0 0 10px #00008B, 0 0 20px #001a66;
 }
+.extra-circle {
+  position: absolute;
+  top: 50px;      /* adjust vertical position */
+  left: 50px;     /* adjust horizontal position */
+  width: 200px;   /* smaller than the right circle */
+  height: 200px;
+  border-radius: 50%;
+  overflow: hidden;
+  box-shadow: 0 0 15px rgb(255, 0, 0); /* glow effect */
+}
+
+.extra-circle img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.stranger-logo {
+  position: fixed;
+  bottom: 1px;   /* distance from bottom */
+  right: 100px;    /* stick to the right */
+  width: 210px;   /* adjust size as needed */
+  z-index: 1000;  /* keep on top */
+}
+
+.stranger-logo img {
+  width: 120%;
+  height: auto;
+  filter: drop-shadow(0 0 10px red); /* glowing effect */
+}
