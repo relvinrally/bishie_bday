@@ -26,6 +26,12 @@ body{margin:0;padding:0;font-family:'ITCBenguiat',sans-serif;color:#fff;overflow
 .left{flex:1;}
 .right{flex:1;display:flex;flex-direction:column;align-items:center;position:relative;}
 
+/* Shift the entire profile section (image + balloons + name) */
+.box__account {
+  position: relative;
+  left: 120px; /* adjust this value to move more or less */
+}
+
 /* Box Account */
 .box__account .image img{width:240px;height:240px;border-radius:50%;object-fit:cover;border:5px solid #e50914;box-shadow:0 0 20px #e50914,0 0 40px #ff1e56;margin-bottom:20px;opacity:0;animation:slideUpFade 1s forwards;}
 .name{font-weight:600;font-size:1.6rem;color:#fff;text-shadow:0 0 5px #e50914;margin-bottom:20px;opacity:0;animation:slideUpFade 1.2s forwards 0.5s;}
