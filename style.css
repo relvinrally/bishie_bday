@@ -183,3 +183,14 @@ body{margin:0;padding:0;font-family:'ITCBenguiat',sans-serif;color:#fff;overflow
   width: 100%;
   background: transparent; /* keep page background visible */
 }
+.flag__left, 
+.flag__right {
+  transition: all 0.3s ease;
+  cursor: pointer;
+}
+
+.flag__left:hover, 
+.flag__right:hover {
+  transform: scale(1.1);
+  border-radius: 10px; /* optional, gives them a smoother look */
+}
